@@ -14,16 +14,22 @@ public class Bob {
             } else if (userInput.endsWith("!")) {
                 System.out.println("Whoa, chill out!");
 
-            } else if (userInput.equals("")) {
+            } else if (userInput.isEmpty()) {
                 System.out.println("Fine. Be that way!");
 
-            } else if (userInput.equals(userInput)) {
+            } else {
 
                 System.out.println("Whatever.");
             }
             System.out.println("do you want to say something to bob? y/n");
-        }while (input.nextLine().equalsIgnoreCase("y"));
+        } while (input.nextLine().equalsIgnoreCase("y"));
             System.out.println("bye");
         }
 
 }
+
+
+
+
+
+//command B
