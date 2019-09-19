@@ -47,31 +47,25 @@ public class MethodsExercises {
 
     public static int getInteger(int min, int max){
         Scanner input = new Scanner(System.in);
-
 //        System.out.println(input.hasNextInt());
-
+        if (input.hasNextInt()) {
         int numInput = input.nextInt();
         if (numInput >= min && numInput <= max) {
-        System.out.println(numInput + " is between 1 & 10");
+        System.out.println(numInput + " is between 1 & 10!");
         } else if (numInput < min || numInput > max) {
             System.out.println("This number is not valid, enter another number: ");
-        getInteger(1,10);
-
+           return getInteger(min, max);
         }
 //        getInteger(1,10); if you leave it here it continues to run
+        } else {
+            System.out.println("Not a valid input! Enter a valid number: ");
+            return getInteger(min,max);
 
-        return min + max;
+        }
+        return getInteger(min,max);
 
-
-//        if (input.hasNextInt() && !input.hasNextDouble() && !input.hasNextFloat()) {
-//            System.out.println("that's a valid number");
-//        } else {
-//            System.out.println("NOPE");
-//        }
-
-
-
-//put in do while loop that will check if number is valid then
     }
+
+
 
 }
