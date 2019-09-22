@@ -10,13 +10,6 @@ public class MethodsExercises {
         System.out.println(modulus(10, 3));
         System.out.println(multiplyNoOp(2, 3));
 
-//        Scanner input = new Scanner(System.in);
-//        int numInput = sc.nextInt();
-//        System.out.println(Integer.parseInt(numInput));
-//
-//        int userInput = (getInteger(1, 10));
-
-//        System.out.println(factorial(getInteger(1,10)));
         String yesOrNo = "y";
         do {
             factorial();
@@ -24,6 +17,7 @@ public class MethodsExercises {
             yesOrNo = sc.nextLine();
         } while (yesOrNo.equalsIgnoreCase("Y"));
 
+        diceRoll();
 
 //has next int
     }
@@ -101,6 +95,24 @@ public class MethodsExercises {
         }
         return 0;
 
+    }
+
+        public static void diceRoll() {
+        System.out.print("How many sides should each dice have? ");
+        Scanner userReply = new Scanner(System.in);
+        int diceSides = Integer.parseInt(userReply.nextLine());
+        double randomGen = (Math.random()*(diceSides-1)) + 1;
+        int random = (int) randomGen;
+        double randomGen2 = (Math.random()*(diceSides-1)) + 1;
+        int random2 = (int) randomGen2;
+        int dice1 = random;
+        int dice2 = random2;
+        System.out.printf("Your rolled a %d on one dice, and a %d on the other.\n", dice1, dice2);
+        System.out.print("Would you like to roll again? Y/N");
+        String answer = userReply.nextLine();
+        if(answer.equals("y")) {
+            diceRoll();
+        }
     }
 
 
