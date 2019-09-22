@@ -19,7 +19,7 @@ public class MethodsExercises {
 //        System.out.println(factorial(getInteger(1,10)));
         String yesOrNo = "y";
         do {
-            factorial(0, sc);
+            factorial();
             System.out.println("Would you like to try another number? Y/N");
             yesOrNo = sc.nextLine();
         } while (yesOrNo.equalsIgnoreCase("Y"));
@@ -83,41 +83,27 @@ public class MethodsExercises {
 
     }
 
-    public static long factorial(int num, Scanner sc) {
-//        return userInput;
-        int input = getInteger(1, 10);
+    public static long factorial() {
+//                return userInput;
+
+        int number = getInteger(1, 10);
 
         long Factorial = 1;
-        for (int i = 1; i <= num; i++) {
+        String middleString = "";
+        for (int i = 1; i <= number; i++) {
             Factorial *= i;
-
+            if (middleString.isEmpty()) {
+                middleString += i;
+            } else {
+                middleString += " X " + i;
+            }
+            System.out.println(i + "! = " + middleString + " = " + Factorial);
         }
-        System.out.printf("\n%d! = %d\n", input, Factorial);
-        return Factorial;
+        return 0;
+
     }
 
-//    public static long diceRoll() {
-//        Scanner input = new Scanner(System.in);
-//        while (true) {
-//            int dice1 = (int) (Math.random() * 6 + 1);
-//            int dice2 = (int) (Math.random() * 6 + 1);
-//            int sum = dice1 + dice2;
-//
-//            System.out.println("Roll: total = " + sum);
-//
-//            if (sum == 2 || sum == 3 || sum == 12) {
-//                System.out.println("Sorry with a " + sum + " You LOSE :(");
-//                break;
-//            } else if (sum == 7 || sum == 11) {
-//                System.out.println("Woah!!! With a " + sum + " You WIN!!!!!!!");
-//                break;
-//
-//
-//            }
-//
-//
-//        }
-//        return 0;
-//    }
+
 
 }
+
