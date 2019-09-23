@@ -1,15 +1,16 @@
-import java.util.Scanner;
+import java.util.*;
+import java.lang.*;
 
 public class MethodsExercises {
     public static void main(String[] args) {
 //        1-------------------------------------------
 //        Scanner sc = new Scanner(System.in);
-//        System.out.println(addition(5, 2));
-//        System.out.println(subtraction(5, 2));
-//        System.out.println(multiplication(5, 2));
-//        System.out.println(division(10, 2));
-//        System.out.println(modulus(10, 3));
-//        System.out.println(multiplyNoOp(2, 3));
+////        System.out.println(addition(5, 2));
+////        System.out.println(subtraction(5, 2));
+////        System.out.println(multiplication(5, 2));
+////        System.out.println(division(10, 2));
+////        System.out.println(modulus(10, 3));
+////        System.out.println(multiplyNoOp(2, 3));
 //
 //        String yesOrNo = "y";
 //        do {
@@ -17,11 +18,14 @@ public class MethodsExercises {
 //            System.out.println("Would you like to try another number? Y/N");
 //            yesOrNo = sc.nextLine();
 //        } while (yesOrNo.equalsIgnoreCase("Y"));
+//
+////        diceRoll();
+//
+//
+//
+//    }
 
-//        diceRoll();
-
-    }
-//// 1----------------------------------------------------------------------
+        //// 1----------------------------------------------------------------------
 //    public static double addition(double num1, double num2) {
 //        return num1 + num2;
 //    }
@@ -51,7 +55,7 @@ public class MethodsExercises {
 //    }
 //
 //// 2----------------------------------------------------------------------//
-//     public static int getInteger(int min, int max) {
+//    public static int getInteger(int min, int max) {
 //        Scanner input = new Scanner(System.in);
 //        System.out.println("Enter a number between 1 and 10: ");
 //        if (input.hasNextInt()) {
@@ -70,7 +74,8 @@ public class MethodsExercises {
 //        return getInteger(min, max);
 //
 //    }
-////// 3----------------------------------------------------------------------
+
+        //// 3----------------------------------------------------------------------
 //    public static long factorial() {
 //        int number = getInteger(1, 10);
 //        long Factorial = 1;
@@ -83,10 +88,10 @@ public class MethodsExercises {
 //                middleString += " X " + i;
 //            }
 //            System.out.println(i + "! = " + middleString + " = " + Factorial);
+////        }
+////        return 0;
+////
 //        }
-//        return 0;
-//
-//    }
 //// 4----------------------------------------------------------------------
 //        public static void diceRoll() {
 //        System.out.print("How many sides should the dice have? ");
@@ -104,10 +109,12 @@ public class MethodsExercises {
 //        if(answer.equals("y")) {
 //            diceRoll();
 //        }
-//    }
+//
 
 //// 5----------------------------------------------------------------------
 
 
+    }
 }
+
 
