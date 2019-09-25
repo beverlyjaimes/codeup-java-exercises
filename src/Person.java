@@ -18,6 +18,8 @@ public class Person {
 
     public void sayHello() {
         System.out.println("Hello from " + this.getName());
+
+
     }
 
 
@@ -26,6 +28,7 @@ public class Person {
 //        Person person2 = new Person("John");
 //        System.out.println(person1.getName().equals(person2.getName()));
 //        System.out.println(person1 == person2);
+
 /**
  * They are not the same object they just have the same name
  * (the UID is not the same)
