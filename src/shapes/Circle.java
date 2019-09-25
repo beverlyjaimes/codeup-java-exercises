@@ -1,17 +1,22 @@
 package shapes;
 
+import util.Input;
+
 public class Circle {
     private double radius;
 
+
     public static void main(String[] args) {
-        Circle circ = new Circle(5);
+        Circle circ = new Circle(2);
+
         System.out.println(circ.getArea());
         System.out.println(circ.getCircumference());
     }
-
     public Circle(double radius) {
-
-
+//
+//        Input rad = new Input();
+//        this.radius = rad.getDouble();
+//        System.out.println(radius);
     }
     public double getArea() {
 //        area = pi x (radius ^ 2)

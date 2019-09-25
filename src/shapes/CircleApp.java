@@ -1,12 +1,12 @@
 package shapes;
 
-import java.util.Scanner;
+import util.Input;
 
 public class CircleApp {
-    Scanner input = new Scanner(System.in);
 
     public static void main(String[] args) {
+        Circle cir = new Circle();
+        Input rad = new Input();
 
-        System.out.println(input.getInt());
     }
 }

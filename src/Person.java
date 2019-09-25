@@ -1,22 +1,25 @@
 public class Person {
     private String name;
 
-    public String getName() {
-        return name;
+    public Person(String name) {
+//        this.name = name;
+//        or
+        setName(name);
     }
 
+    public String getName() {
+        return name;
+//        GETTER**
+    }
+//SETTERS ARE VOIDS BECAUSE THEY SET INFO
     public void setName(String name) {
         this.name = name;
     }
 
     public void sayHello() {
-        System.out.println("Hello from " + name);
+        System.out.println("Hello from " + this.getName());
     }
 
-    public Person(String name) {
-        this.name = name;
-
-    }
 
     public static void main(String[] args) {
 //        Person person1 = new Person("John");
