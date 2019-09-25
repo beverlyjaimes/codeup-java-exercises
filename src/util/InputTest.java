@@ -9,7 +9,7 @@ public class InputTest {
         System.out.println(test.getInt( 5,10));
         System.out.println(test.getInt());
         System.out.println(test.getDouble(2,10));
-        System.out.println(test.getDouble());
+        System.out.println(test.getDouble(""));
 
     }
 }

@@ -20,7 +20,7 @@ public class Input {
         System.out.println(keyboard.getInt( 1 ,10));
         System.out.println(keyboard.getInt());
         System.out.println(keyboard.getDouble(1,10));
-        System.out.println(keyboard.getDouble());
+        System.out.println(keyboard.getDouble(""));
         System.out.println(keyboard.getString());
 
     }
@@ -107,7 +107,7 @@ public class Input {
          *FERNANDOS WAY
          */
 
-        double number = getDouble();
+        double number = getDouble("Give me a decimal:");
         if(number >=min && number <= max) {
             return number;
         } else {
@@ -117,8 +117,8 @@ public class Input {
 
     }
 
-    public int getDouble() {
-        System.out.println("Enter a decimal:");
+    public int getDouble(String prompt) {
+        System.out.println(prompt);
         return scanner.nextInt();
     }
 
