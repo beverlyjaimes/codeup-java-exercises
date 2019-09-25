@@ -1,5 +1,6 @@
 package util;
 
+import java.io.OutputStream;
 import java.util.Scanner;
 
 public class Input {
@@ -29,39 +30,46 @@ public class Input {
     }
 
     public boolean yesNo(){
-        System.out.println("Want to continue? (y)");
-        if ((scanner.nextLine().equalsIgnoreCase("y") || (scanner.nextLine().equalsIgnoreCase("yes") ))) {
-            return true;
-        } else {
-            return false;
-        }
+        System.out.println("Want to continue? (y/n)");
+        String answer =this.scanner.nextLine();
+        return answer.equalsIgnoreCase("y") || answer.equalsIgnoreCase("yes");
+
+//
+//        if ((scanner.nextLine().equalsIgnoreCase("y") || (scanner.nextLine().equalsIgnoreCase("yes") ))) {
+//            return true;
+//        } else {
+//            return false;
+//        }
 
     }
 
-//    public int getInt(int min, int max){
-//        System.out.println("Enter a maximum value:");
-//         scanner.nextInt();
-//        System.out.println("Enter a maximum value:");
-//      scanner.nextInt();
-//
-//    }
 
        public int getInt(int min, int max) {
-//        Scanner input = new Scanner(System.in);
-        System.out.println("Enter a number between 1 and 10: ");
-        if (scanner.hasNextInt()) {
-            int numInput = scanner.nextInt();
-            if (numInput >= min && numInput <= max) {
-                System.out.println(numInput + " is between 1 & 10!");
-            } else if (numInput < min || numInput > max) {
-                System.out.println("This number is not valid, enter another number: ");
-                return getInt(min, max);
-            }
-        } else {
-            System.out.println("Not a valid input! Enter a valid number: ");
-            return getInt(min, max);
-        }
-        return getInt(min, max);
+//        System.out.println("Enter a number between 1 and 10: ");
+//        if (scanner.hasNextLine()) {
+//            int numInput = Integer.parseInt(this.scanner.nextLine());
+//            if (numInput >= min && numInput <= max) {
+//                System.out.println(numInput + " is between 1 & 10!");
+//            } else if (numInput < min || numInput > max) {
+//                System.out.println("This number is not valid, enter another number: ");
+//                return getInt(min, max);
+//            }
+//        } else {
+//            System.out.println("Not a valid input! Enter a valid number: ");
+//            return getInt(min, max);
+//        }
+//        return getInt(min, max);
+/**
+ *FERNANDOS WAY
+ */
+           System.out.println("Enter a number");
+           int number = Integer.parseInt(this.scanner.nextLine());
+           if(number >=min && number <= max) {
+               return number;
+           } else {
+               System.out.println("Out of range");
+           }
+           return getInt(min, max);
 
     }
 
