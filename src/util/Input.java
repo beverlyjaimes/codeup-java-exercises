@@ -21,12 +21,20 @@ public class Input {
         System.out.println(keyboard.getInt());
         System.out.println(keyboard.getDouble(1,10));
         System.out.println(keyboard.getDouble());
+        System.out.println(keyboard.getString());
 
     }
 
-    public String getString(){
-        System.out.println("Please enter a sentence: ");
-        return scanner.nextLine();
+    private String getString(){
+        return this.scanner.nextLine();
+    }
+    public String getString(String prompt){
+        if (prompt.isEmpty()){
+            System.out.println("Type: ");
+        } else {
+        System.out.println(prompt);
+        }
+        return getString();
     }
 
     public boolean yesNo(){
@@ -62,8 +70,8 @@ public class Input {
 /**
  *FERNANDOS WAY
  */
-           System.out.println("Enter a number");
-           int number = Integer.parseInt(this.scanner.nextLine());
+
+           int number = getInt();
            if(number >=min && number <= max) {
                return number;
            } else {
@@ -98,8 +106,8 @@ public class Input {
         /**
          *FERNANDOS WAY
          */
-        System.out.println("Enter a decimal:");
-        Double number = Double.parseDouble(this.scanner.nextLine());
+
+        double number = getDouble();
         if(number >=min && number <= max) {
             return number;
         } else {
