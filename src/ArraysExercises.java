@@ -2,6 +2,7 @@ import java.util.Arrays;
 
 public class ArraysExercises {
        static Person[] people = new Person[3];
+
     public static void main(String[] args) {
         int[] numbers = {1, 2, 3, 4, 5};
 //        System.out.println(numbers);
@@ -19,6 +20,20 @@ public class ArraysExercises {
         for(Person person : people) {
             person.sayHello();
         }
+        addPerson(people, new Person("Bob"));
 
     }
+
+  public static void addPerson(Person[] people, Person newPerson) {
+    Person[] newList = Arrays.copyOf(people, people.length+1);
+    newList[newList.length-1] = newPerson;
+       for(Person Person: newList) {
+           System.out.println(Person.getName());
+       }
+
+//        Person[] newPerson = new Person[person.length+1];
+//    newPerson[4] = new Person("Bob");
+
+    }
+
 }
