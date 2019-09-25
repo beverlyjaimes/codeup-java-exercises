@@ -18,7 +18,7 @@ public class Input {
         System.out.println(keyboard.getString());
         System.out.println(keyboard.yesNo());
         System.out.println(keyboard.getInt( 1 ,10));
-        System.out.println(keyboard.getInt());
+        System.out.println(keyboard.getInt(""));
         System.out.println(keyboard.getDouble(1,10));
         System.out.println(keyboard.getDouble(""));
         System.out.println(keyboard.getString());
@@ -71,7 +71,7 @@ public class Input {
  *FERNANDOS WAY
  */
 
-           int number = getInt();
+           int number = getInt("Enter a number:");
            if(number >=min && number <= max) {
                return number;
            } else {
@@ -81,8 +81,8 @@ public class Input {
 
     }
 
-    public int getInt() {
-        System.out.println("Enter a number:");
+    public int getInt(String prompt) {
+        System.out.println(prompt);
         return scanner.nextInt();
     }
 
