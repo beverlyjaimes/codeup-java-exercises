@@ -11,6 +11,7 @@ public class Circle {
 
     public Circle(double radius) {
 
+
     }
     public double getArea() {
 //        area = pi x (radius ^ 2)
@@ -19,7 +20,6 @@ public class Circle {
 
     }
     public double getCircumference() {
-
 //        circumference = 2 x pi x radius
        return 2 * Math.PI * radius;
     }

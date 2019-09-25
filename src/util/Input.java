@@ -30,7 +30,7 @@ public class Input {
 
     public boolean yesNo(){
         System.out.println("Want to continue? (y)");
-        if (scanner.nextLine().equalsIgnoreCase("y") ){
+        if ((scanner.nextLine().equalsIgnoreCase("y") || (scanner.nextLine().equalsIgnoreCase("yes") ))) {
             return true;
         } else {
             return false;
