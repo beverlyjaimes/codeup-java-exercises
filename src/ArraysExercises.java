@@ -17,40 +17,18 @@ public class ArraysExercises {
         people[1] = new Person("Victor");
         people[2] = new Person("Jesus");
 
-        for(Person person : people) {
-            person.sayHello();
+       people= addPerson(people, new Person("Bob"));
+        people= addPerson(people, new Person("Alex"));
+
+
+        for (Person eachPerson : people) {
+            System.out.println(eachPerson.getName());
         }
-        addPerson(people, new Person("Bob"));
 
     }
-
-  public static void addPerson(Person[] people, Person newPerson) {
-      Person[] newList = Arrays.copyOf(people, people.length + 1);
-      newList[newList.length - 1] = newPerson;
-      for (Person Person : newList) {
-          System.out.println(Person.getName());
-      }
-  }
-//        Person[] newPerson = new Person[person.length+1];
-//    newPerson[4] = new Person("Bob");
-/**
- * Justins walkthrough
- *
- */
-//    Person[] people = {
-//        new Person ("John");
-//        new Person("Bob");
-//        new Person ("Joe");
-//    };
-//    }
-//    public static Person[] addPerson(Person[] people, Person p){
-//        Person[]output=new Person[people.length+1];
-//        for(int i=0;i<people.length;i+=1){
-//        output[i]=people[i];
-//        }
-//        output[output.length-1] =p;
-//        return output;
-//        }
-
-
+    public static Person[] addPerson(Person[] people, Person newPeople){
+        Person[] newList = Arrays.copyOf(people, people.length + 1);
+        newList[newList.length - 1]= newPeople;
+        return newList;
+    }
 }
