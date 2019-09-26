@@ -7,6 +7,12 @@ public class Movie {
     public Movie(String name, String category) {
     setName(name);
     setCategory(category);
+//    this.name = name;
+//    this.category= category;
+/**
+ * ctrl + return
+ * you can automaticallly set the getters and setters and constructor
+ */
 
     }
     public String getName() {
