@@ -8,18 +8,20 @@ public class Rectangle extends Quadrilateral implements Measurable  {
         super(width, length);
     }
 
-    public void setLength(double length) {
-        super.length = length;
+    @Override
+    void setLength(double length) {
+        super.length =length;
     }
 
-    public void setWidth(double width) {
-        super.width =width;
+    @Override
+    void setWidth(double width) {
+        super.width = width;
     }
-
+    @Override
     public double getPerimeter() {
         return (2 * super.length) + (2 * super.width);
     }
-
+    @Override
     public double getArea() {
         return super.length * super.width;
     }
