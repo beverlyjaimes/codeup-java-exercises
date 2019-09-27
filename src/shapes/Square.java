@@ -4,14 +4,20 @@ public class Square extends Rectangle {
 
 //    all sides of a square are the same
 
-    public Square(int side) {
+    public Square(double side) {
         super(side,side);
     }
 
-    public int getArea(){
-        return 4 * this.length;
+
+    @Override
+    public double getArea(){
+        return 4 * super.length;
     }
-    public int getPerimeter(){
-        return this.length * this.width;
+
+    @Override
+    public double getPerimeter(){
+        return super.length * super.width;
     }
+//    or Math.pow(super.length,2);
 }
+//super and @override are hinting that you are overriding from the parent class
