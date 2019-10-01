@@ -21,7 +21,7 @@ public class Input {
         System.out.println(keyboard.getInt());
         System.out.println(keyboard.getDouble(1,10));
         System.out.println(keyboard.getDouble());
-        System.out.println(keyboard.getString());
+        System.out.println(keyboard.getString("sfs"));
 
     }
 
@@ -76,7 +76,7 @@ public class Input {
         int number;
         try {
             number = Integer.valueOf(getString("Enter a number"));
-        }catch(Exception e){
+        }catch(NumberFormatException e){
             System.out.println("invalid input! ");
 //            e.printStackTrace();
             return getInt();
@@ -107,13 +107,27 @@ public class Input {
         double number;
         try {
             number = Double.valueOf(getString("Enter a decimal"));
-        }catch(Exception e){
+        }catch(NumberFormatException e){
             System.out.println("invalid input! ");
             e.printStackTrace();
             return getInt();
         }
         return number;
     }
+
+    public int getBinary() {
+        int num = Integer.valueOf(getString("Enter a binary number: "), 2);
+        System.out.print("Your number is: ");
+        return num;
+    }
+    public int getHex() {
+        int num = Integer.valueOf(getString("Enter a hexadecimal number: "), 16);
+        System.out.print("Your number is: ");
+        return num;
+    }
+
+
+
 
 
 }
