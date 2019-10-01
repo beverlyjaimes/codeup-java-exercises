@@ -116,7 +116,12 @@ public class Input {
     }
 
     public int getBinary() {
-        int num = Integer.valueOf(getString("Enter a binary number: "), 2);
+        int num;
+        try{
+        num = Integer.valueOf(getString("Enter a binary number: "), 2);
+        }catch(NumberFormatException e){
+            return getBinary();
+        }
         System.out.print("Your number is: ");
         return num;
     }
