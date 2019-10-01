@@ -18,9 +18,9 @@ public class Input {
         System.out.println(keyboard.getString());
         System.out.println(keyboard.yesNo());
         System.out.println(keyboard.getInt( 1 ,10));
-        System.out.println(keyboard.getInt(""));
+        System.out.println(keyboard.getInt());
         System.out.println(keyboard.getDouble(1,10));
-        System.out.println(keyboard.getDouble(""));
+        System.out.println(keyboard.getDouble());
         System.out.println(keyboard.getString());
 
     }
@@ -28,6 +28,7 @@ public class Input {
     private String getString(){
         return this.scanner.nextLine();
     }
+
     public String getString(String prompt){
         if (prompt.isEmpty()){
             System.out.println("Type: ");
@@ -53,25 +54,10 @@ public class Input {
 
 
        public int getInt(int min, int max) {
-//        System.out.println("Enter a number between 1 and 10: ");
-//        if (scanner.hasNextLine()) {
-//            int numInput = Integer.parseInt(this.scanner.nextLine());
-//            if (numInput >= min && numInput <= max) {
-//                System.out.println(numInput + " is between 1 & 10!");
-//            } else if (numInput < min || numInput > max) {
-//                System.out.println("This number is not valid, enter another number: ");
-//                return getInt(min, max);
-//            }
-//        } else {
-//            System.out.println("Not a valid input! Enter a valid number: ");
-//            return getInt(min, max);
-//        }
-//        return getInt(min, max);
 /**
  *FERNANDOS WAY
  */
-
-           int number = getInt("Enter a number:");
+           int number = getInt();
            if(number >=min && number <= max) {
                return number;
            } else {
@@ -81,33 +67,27 @@ public class Input {
 
     }
 
-    public int getInt(String prompt) {
-        System.out.println(prompt);
-        return scanner.nextInt();
+//    public int getInt(String prompt) {
+//        System.out.println(prompt);
+//        return scanner.nextInt();
+//    }
+
+    public int getInt() {
+        int number;
+        try {
+            number = Integer.valueOf(getString("Enter a number"));
+        }catch(Exception e){
+            System.out.println("invalid input! ");
+//            e.printStackTrace();
+            return getInt();
+        }
+        return number;
     }
 
 
     public double getDouble(double min, double max) {
-//        Scanner input = new Scanner(System.in);
-//        System.out.println("Enter a number between 1 and 10: ");
-//        if (input.hasNextDouble()) {
-//            int numInput = input.nextInt();
-//            if (numInput >= min && numInput <= max) {
-//                System.out.println(numInput + " is between 1 & 10!");
-//            } else if (numInput < min || numInput > max) {
-//                System.out.println("This number is not valid, enter another number: ");
-//                return getDouble(min, max);
-//            }
-//        } else {
-//            System.out.println("Not a valid input! Enter a valid number: ");
-//            return getDouble(min, max);
-//        }
-//        return getDouble(min, max);
-        /**
-         *FERNANDOS WAY
-         */
 
-        double number = getDouble("Give me a decimal:");
+        double number = getDouble();
         if(number >=min && number <= max) {
             return number;
         } else {
@@ -117,9 +97,23 @@ public class Input {
 
     }
 
-    public int getDouble(String prompt) {
-        System.out.println(prompt);
-        return scanner.nextInt();
+
+//    public int getDouble(String prompt) {
+//        System.out.println(prompt);
+//        return scanner.nextInt();
+//    }
+
+    public double getDouble(){
+        double number;
+        try {
+            number = Double.valueOf(getString("Enter a decimal"));
+        }catch(Exception e){
+            System.out.println("invalid input! ");
+            e.printStackTrace();
+            return getInt();
+        }
+        return number;
     }
+
 
 }
