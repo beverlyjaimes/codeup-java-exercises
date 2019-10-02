@@ -11,8 +11,8 @@ public class InputTest {
 //        System.out.println(test.getDouble(2,10));
 //        System.out.println(test.getDouble(""));
 //        System.out.println(Integer.getInteger("2"));
-//        test.getInt();
-//        test.getDouble();
+        test.getInt();
+        test.getDouble();
         System.out.println(test.getBinary());
         System.out.println(test.getHex());
     }

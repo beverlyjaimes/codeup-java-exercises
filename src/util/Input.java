@@ -73,15 +73,14 @@ public class Input {
 //    }
 
     public int getInt() {
-        int number;
         try {
-            number = Integer.valueOf(getString("Enter a number"));
+            return Integer.valueOf(getString("Enter a number"));
         }catch(NumberFormatException e){
             System.out.println("invalid input! ");
 //            e.printStackTrace();
-            return getInt();
         }
-        return number;
+        return getInt();
+
     }
 
 
@@ -104,31 +103,35 @@ public class Input {
 //    }
 
     public double getDouble(){
-        double number;
+
         try {
-            number = Double.valueOf(getString("Enter a decimal"));
+            return Double.valueOf(getString("Enter a decimal"));
         }catch(NumberFormatException e){
             System.out.println("invalid input! ");
             e.printStackTrace();
-            return getInt();
+
         }
-        return number;
+        return getDouble();
     }
 
     public int getBinary() {
-        int num;
+
         try{
-        num = Integer.valueOf(getString("Enter a binary number: "), 2);
+        return Integer.valueOf(getString("Enter a binary number: "), 2);
         }catch(NumberFormatException e){
-            return getBinary();
-        }
+            e.printStackTrace();
         System.out.print("Your number is: ");
-        return num;
+        }
+        return getBinary();
     }
     public int getHex() {
-        int num = Integer.valueOf(getString("Enter a hexadecimal number: "), 16);
-        System.out.print("Your number is: ");
-        return num;
+        try {
+        return Integer.valueOf(getString("Enter a hexadecimal number: "), 16);
+        }catch(NumberFormatException e){
+            System.out.print("Your number is: ");
+        }
+            return getHex();
+
     }
 
 
