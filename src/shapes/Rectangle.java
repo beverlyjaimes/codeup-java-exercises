@@ -56,8 +56,8 @@ public class Rectangle extends Quadrilateral implements Measurable  {
 //    public double getLength() {
 //        return length;
 //    }
-//
-//    public double getWidth() {
-//        return width;
-//    }
+
+    public double getWidth() {
+        return width;
+    }
 }

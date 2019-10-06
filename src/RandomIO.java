@@ -8,7 +8,7 @@ import java.util.Arrays;
 import java.util.List;
 public class RandomIO {
 
-    public static String getFiles(String x) {
+    public static List<String> getFiles(String x) {
 //
         Path p = Paths.get("src", x);
         List<String> lines = new ArrayList<>();
@@ -18,12 +18,11 @@ public class RandomIO {
         } catch (IOException e) {
             e.printStackTrace();
         }
-//        System.out.println(lines);
-//
-//        for (String name : lines) {
-//            System.out.println(name);
-//        }
-        return lines.toString();
+//        making it a List<string> allows for manipulation
+        for (String name : lines) {
+            System.out.println("Hello, " + name + "!");
+        }
+        return lines;
 
     }
 
