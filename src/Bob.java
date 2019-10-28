@@ -22,6 +22,7 @@ public class Bob {
                 System.out.println("Whatever.");
             }
             System.out.println("do you want to say something to bob? y/n");
+            System.out.println("do you want to say something to bob? y/n");
         } while (input.nextLine().equalsIgnoreCase("y"));
             System.out.println("bye");
         }
